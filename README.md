@@ -1,5 +1,3 @@
-[![Build Status](https://travis-ci.org/jh3y/parcel-boilerplate.svg?branch=master)](https://travis-ci.org/jh3y/parcel-boilerplate)
-
 # Parcel JS boilerplate
 
 a boilerplate for using a simple vanilla js project `Parcel JS` for front-end development!
@@ -30,9 +28,3 @@ As a prerequisite it's assumed you have `npm/yarn` installed.
 ## License
 
 MIT
-
----
-
-Any problems or questions, feel free to post an issue or tweet me, @\_jh3y!
-
-@jh3y 2018 :smile:
