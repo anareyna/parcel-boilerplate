@@ -1,0 +1,21 @@
+$text-color: #444;
+
+.demo {
+    color: $text-color;
+
+    &__text {
+        color: purple;
+        font-size: 2rem;
+
+        @include media-min('sm') {
+            color: green;
+        }
+    }
+
+    &__inlined-image {
+        background-image: url('../assets/img/logo.png');
+        background-size: contain;
+        height: 100px;
+        width: 100px;
+    }
+}

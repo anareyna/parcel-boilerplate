@@ -1,0 +1,27 @@
+name: Build and deploy your app
+on: [push]
+jobs:
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3
+
+            - uses: actions/setup-node@v3
+              with:
+                  cache: 'yarn'
+
+            - name: Install dependencies
+              run: yarn install
+
+            - name: Build
+              run: yarn build
+
+            - name: Deploy
+              uses: kevinpainchaud/simple-ftp-deploy-action@v1.2.0
+              with:
+                  ftp_host: ${{ secrets.FTP_HOST }}
+                  ftp_username: ${{ secrets.FTP_USERNAME }}
+                  ftp_password: ${{ secrets.FTP_PASSWORD }}
+                  local_source_dir: 'dist'
+                  dist_target_dir: 'yourwebsite.com/optional-path'
+                  delete: 'false'

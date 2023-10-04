@@ -1,0 +1,40 @@
+$MEDIA_SIZES: xxs 0 479px, xs 480px 767px, sm 768px 991px, md 992px 1199px,
+    lg 1200px 1399px, xl 1400px 3000px;
+
+@function get-size($size-name, $is_min: true) {
+    @each $size in $MEDIA_SIZES {
+        @if nth($size, 1) == $size-name {
+            @if $is_min {
+                @return nth($size, 2);
+            }
+
+            @return nth($size, 3);
+        }
+    }
+}
+
+@mixin media-min($screen-size: 'xs') {
+    @media (min-width: get-size($screen-size)) {
+        @content;
+    }
+}
+
+@mixin media-max($screen-size: 'xs') {
+    @media (max-width: get-size($screen-size, false)) {
+        @content;
+    }
+}
+
+@mixin media-between($screen-size-min: 'xs', $screen-size-max: 'lg') {
+    @include media-min($screen-size-min) {
+        @include media-max($screen-size-max) {
+            @content;
+        }
+    }
+}
+
+@mixin media-just($screen-size: 'xs') {
+    @media (min-width: get-size($screen-size)) AND (max-width: get-size($screen-size, false)) {
+        @content;
+    }
+}

@@ -2,44 +2,37 @@
 
 # Parcel JS boilerplate
 
-a boilerplate for using `Parcel JS` for front-end development!
+a boilerplate for using a simple vanilla js project `Parcel JS` for front-end development!
 
-* Markup compilation
-* Stylesheet compilation
-* Script compilation
-* Source linting
-* Static server with automatic live reload/style injection
+-   Stylesheet compilation
+-   Script compilation
 
 Gets you up and running with `Parcel JS` quickly! 🏃
 
-Currently the boilerplate makes use of `pug`, `stylus` and `es6/babel`. But these could easily be swapped out/removed based on your requirements.
-
-The idea is that _you_ will fork your own version and adapt it to fit your requirements 👍
-
 ## Usage
 
-As a prerequisite it's assumed you have `npm/yarn` installed and the `gulp-cli`.
+As a prerequisite it's assumed you have `npm/yarn` installed.
 
-1. Clone the repo
+1.  Clone the repo
 
-        git clone https://github.com/jh3y/parcel-boilerplate.git
-
-2. Install dependencies
+2.  Install dependencies
 
         npm install / yarn
 
-3. Start
+3.  Start
 
-        make develop
+        yarn start
 
-## Tasks
-The boilerplate makes uses of a self-documented `Makefile`. You can see all available tasks with `make` 😎
+4.  Build static files
+
+        yarn build
 
 ## License
+
 MIT
 
 ---
 
-Any problems or questions, feel free to post an issue or tweet me, @_jh3y!
+Any problems or questions, feel free to post an issue or tweet me, @\_jh3y!
 
 @jh3y 2018 :smile:
